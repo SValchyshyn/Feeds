@@ -1,0 +1,18 @@
+/* Text for cancel feedback button */
+"customer_feedback_cancel_button" = "Undo";
+
+/* Hint text for user input field */
+"customer_feedback_input_hint" = "Feel free to add a few more words to your experience. Avoid mentioning personal information.";
+
+/* Title for predefined options */
+"customer_feedback_options_title" = "What made you choose that particular smiley?";
+
+/* Title for rating feedback */
+"customer_feedback_rating_title" = "How was your shopping trip?";
+
+/* Text for confirm feedback button */
+"customer_feedback_send_button" = "Send";
+
+/* Default 'thank you message' that will be shown after user confirms feedback if no message is provided by the API */
+"customer_feedback_thank_you_message" = "Thank you for your reply.\nWe strive to make your experience as good as possible.";
+

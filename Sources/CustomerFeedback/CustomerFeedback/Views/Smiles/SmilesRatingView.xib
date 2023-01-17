@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmilesRatingView" customModule="CustomerFeedback" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="h3q-ra-rlE"/>
+                <outlet property="titleLabel" destination="THA-cB-NDN" id="PuX-ng-TN7"/>
+                <outletCollection property="smiles" destination="rgs-lK-zWL" collectionClass="NSMutableArray" id="PNF-c9-kSw"/>
+                <outletCollection property="smiles" destination="qyc-Vp-FFW" collectionClass="NSMutableArray" id="ao8-gp-DPj"/>
+                <outletCollection property="smiles" destination="hTR-v9-d5y" collectionClass="NSMutableArray" id="Upg-Uc-V7Z"/>
+                <outletCollection property="smiles" destination="k7G-MS-INh" collectionClass="NSMutableArray" id="6i8-0Y-XuU"/>
+                <outletCollection property="smiles" destination="LTa-zp-QAz" collectionClass="NSMutableArray" id="SJR-UR-pfa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="265" height="74"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Rate your shopping experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THA-cB-NDN">
+                    <rect key="frame" x="12" y="4" width="241" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="u4i-7x-7oB">
+                    <rect key="frame" x="24.5" y="34" width="216" height="32"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgs-lK-zWL" userLabel="awful">
+                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="rgs-lK-zWL" secondAttribute="height" multiplier="1:1" id="GX8-cX-PaE"/>
+                            </constraints>
+                            <state key="normal" image="ic_smiley_awful_deselected"/>
+                            <state key="selected" image="ic_smiley_awful_selected"/>
+                            <connections>
+                                <action selector="smileyPressed:" destination="-1" eventType="touchUpInside" id="pAK-RX-38y"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyc-Vp-FFW" userLabel="bad">
+                            <rect key="frame" x="46" y="0.0" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="qyc-Vp-FFW" secondAttribute="height" multiplier="1:1" id="E53-PD-icZ"/>
+                            </constraints>
+                            <state key="normal" image="ic_smiley_bad_deselected"/>
+                            <state key="selected" image="ic_smiley_bad_selected"/>
+                            <connections>
+                                <action selector="smileyPressed:" destination="-1" eventType="touchUpInside" id="oE5-Nf-TPS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTR-v9-d5y" userLabel="ok">
+                            <rect key="frame" x="92" y="0.0" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="hTR-v9-d5y" secondAttribute="height" multiplier="1:1" id="Vba-zu-S9i"/>
+                            </constraints>
+                            <state key="normal" image="ic_smiley_ok_deselected"/>
+                            <state key="selected" image="ic_smiley_ok_selected"/>
+                            <connections>
+                                <action selector="smileyPressed:" destination="-1" eventType="touchUpInside" id="WEV-gg-gzf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7G-MS-INh" userLabel="good">
+                            <rect key="frame" x="138" y="0.0" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="k7G-MS-INh" secondAttribute="height" multiplier="1:1" id="joJ-6W-qp2"/>
+                            </constraints>
+                            <state key="normal" image="ic_smiley_good_deselected"/>
+                            <state key="selected" image="ic_smiley_good_selected"/>
+                            <connections>
+                                <action selector="smileyPressed:" destination="-1" eventType="touchUpInside" id="jRc-pC-W7n"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTa-zp-QAz" userLabel="great">
+                            <rect key="frame" x="184" y="0.0" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="LTa-zp-QAz" secondAttribute="height" multiplier="1:1" id="4BM-XY-EKT"/>
+                            </constraints>
+                            <state key="normal" image="ic_smiley_great_deselected"/>
+                            <state key="selected" image="ic_smiley_great_selected"/>
+                            <connections>
+                                <action selector="smileyPressed:" destination="-1" eventType="touchUpInside" id="7me-a3-2yH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="C7b-eI-rbG"/>
+                        <constraint firstItem="qyc-Vp-FFW" firstAttribute="width" secondItem="qyc-Vp-FFW" secondAttribute="height" multiplier="1:1" id="sRK-uf-j0G"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="THA-cB-NDN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="8oe-ro-jx0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="THA-cB-NDN" secondAttribute="trailing" constant="12" id="TXf-OM-1qK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="u4i-7x-7oB" secondAttribute="bottom" constant="8" id="byD-bE-TMX"/>
+                <constraint firstItem="u4i-7x-7oB" firstAttribute="top" secondItem="THA-cB-NDN" secondAttribute="bottom" constant="10" id="m5Z-I8-wLI"/>
+                <constraint firstItem="u4i-7x-7oB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mWT-CX-pmU"/>
+                <constraint firstItem="THA-cB-NDN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="yZa-yI-Osc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="114" y="94"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="THA-cB-NDN">
+            <size key="intrinsicContentSize" width="236" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="ic_smiley_awful_deselected" width="38" height="38"/>
+        <image name="ic_smiley_awful_selected" width="36" height="36"/>
+        <image name="ic_smiley_bad_deselected" width="38" height="38"/>
+        <image name="ic_smiley_bad_selected" width="36.5" height="36.5"/>
+        <image name="ic_smiley_good_deselected" width="38" height="38"/>
+        <image name="ic_smiley_good_selected" width="36" height="36"/>
+        <image name="ic_smiley_great_deselected" width="38" height="38"/>
+        <image name="ic_smiley_great_selected" width="36.5" height="36.5"/>
+        <image name="ic_smiley_ok_deselected" width="38" height="38"/>
+        <image name="ic_smiley_ok_selected" width="36.5" height="36.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

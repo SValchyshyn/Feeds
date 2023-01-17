@@ -1,0 +1,15 @@
+/* Alert message for 'Can't get receipt' on the front page. */
+"error_receipts_unavailable_body" = "Sorry, error from receipt server, try again later";
+
+/* Alert title when a receipt is not available yet */
+"error_receipts_unavailable_title" = "Error";
+
+/* Prime Transactions. Text to show when a section has no receipts. */
+"receipts_empty_month_text" = "You have no receipts from this month";
+
+/* Text to show when there are no receipts. */
+"receipts_no_data_text" = "You have no receipts";
+
+/* Receipts list screen title */
+"receipts_screen_title" = "Your Receipts";
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Receipt Web View Controller-->
+        <scene sceneID="UgL-2n-38a">
+            <objects>
+                <viewController storyboardIdentifier="ReceiptWebViewController" id="DNH-kb-T6V" customClass="ReceiptWebViewController" customModule="Receipts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gUa-Iz-Avr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDN-Fb-bOb" userLabel="Close Button" customClass="CloseButton" customModule="CoreUserInterface">
+                                <rect key="frame" x="354" y="64" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="INe-Iu-Xy7"/>
+                                    <constraint firstAttribute="height" constant="40" id="MQx-0u-ezh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.85999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isLight" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeAction:" destination="DNH-kb-T6V" eventType="touchUpInside" id="n0Q-lP-LfI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b7j-bw-hhJ"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b7j-bw-hhJ" firstAttribute="trailing" secondItem="MDN-Fb-bOb" secondAttribute="trailing" id="87O-4f-adD"/>
+                            <constraint firstItem="MDN-Fb-bOb" firstAttribute="top" secondItem="b7j-bw-hhJ" secondAttribute="top" constant="20" id="ZTj-5S-Xnw"/>
+                            <constraint firstItem="MDN-Fb-bOb" firstAttribute="top" secondItem="b7j-bw-hhJ" secondAttribute="top" constant="40" id="oST-JZ-9nX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oST-JZ-9nX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="closeButton" destination="MDN-Fb-bOb" id="RQh-1Y-CMk"/>
+                        <outlet property="topCloseButtonConstraint" destination="ZTj-5S-Xnw" id="SON-Ru-mnI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nt6-wz-SX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1592" y="537"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="MDN-Fb-bOb">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+    </designables>
+</document>
